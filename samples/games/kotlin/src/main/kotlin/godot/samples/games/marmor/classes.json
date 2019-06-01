@@ -1,0 +1,20 @@
+{
+  "package": "Games/Marmor/Scripts",
+
+  "registerClasses":[
+    {
+      "name": "Main",
+      "class": "godot.samples.games.marmor.Main",
+      "extends": "Node",
+      "methods": [
+        {
+          "name": "_ready"
+        },
+        {
+          "name": "_unhandled_input",
+          "arguments": ["InputEvent"]
+        }
+      ]
+    }
+  ]
+}

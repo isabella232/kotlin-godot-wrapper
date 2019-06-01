@@ -9,7 +9,7 @@ reloadable=true
 
 Windows.64="res://samples.dll"
 Windows.32="res://samples.dll"
-X11.64="res://libmain.so"
+X11.64="res://samples.so"
 
 [dependencies]
 

@@ -34,13 +34,18 @@ kotlin {
             generateGDNS '../project'
             
             //skipEntryGeneration true
-            
+
+            configs 'src/main/kotlin/godot/samples/games/main/classes.json',
+                    'src/main/kotlin/godot/samples/games/marmor/classes.json'
+            /*
             configs 'src/main/kotlin/godot/samples/games/shmup/classes.json',
                     'src/main/kotlin/godot/samples/games/dodge/classes.json',
                     'src/main/kotlin/godot/samples/games/catchBall/classes.json',
                     'src/main/kotlin/godot/samples/games/main/classes.json',
                     'src/main/kotlin/godot/samples/games/fastFinish/classes.json',
+                    'src/main/kotlin/godot/samples/games/marmor/classes.json',
                     'src/main/kotlin/godot/samples/games/pong/classes.json'
+             */
         }
     }
     targets {

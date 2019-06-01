@@ -1,10 +1,12 @@
 package godot.samples.games.main
 
 import godot.*
+import godot.core.GD
 import godot.core.NodePath
 
 class ChooseGameScreen: Node() {
 
+    lateinit var playMarmorButton: Button
     lateinit var playDodgeButton: Button
     lateinit var playPongButton: Button
     lateinit var playShmupButton: Button
@@ -13,6 +15,9 @@ class ChooseGameScreen: Node() {
     lateinit var playFastFinishButton: Button
 
     override fun _ready() {
+        playMarmorButton = (Button from getNode(NodePath("MenuButtons/PlayMarmorButton"))).apply {
+            connect("pressed", this@ChooseGameScreen, "_onPlayMarmorButtonPressed")
+        }
         playDodgeButton = (Button from getNode(NodePath("MenuButtons/PlayDodgeButton"))).apply {
             connect("pressed", this@ChooseGameScreen, "_onPlayDodgeButtonPressed")
         }
@@ -33,8 +38,13 @@ class ChooseGameScreen: Node() {
         }
     }
 
+    fun _onPlayMarmorButtonPressed() {
+        GD.print("Marmor")
+        getTree().changeScene("res://Games/Marmor/Scenes/Main.tscn")
+    }
+
     fun _onPlayDodgeButtonPressed() {
-        getTree().changeScene("res://Games/dodge/Scenes/Main.tscn")
+        getTree().changeScene("res://Games/Dodge/Scenes/Main.tscn")
     }
 
     fun _onPlayShmupButtonPressed() {
